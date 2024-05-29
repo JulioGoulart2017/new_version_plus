@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:new_version_plus/new_version_plus.dart';
@@ -34,18 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
     final newVersion = NewVersionPlus(
       iOSId: 'com.disney.disneyplus', androidId: 'com.whatsapp', androidPlayStoreCountry: "es_ES", androidHtmlReleaseNotes: true, //support country code
     );
-
-    // You can let the plugin handle fetching the status and showing a dialog,
-    // or you can fetch the status and display your own dialog, or no dialog.
-    final ver = VersionStatus(
-      appStoreLink: '',
-      localVersion: '',
-      storeVersion: '',
-      releaseNotes: '',
-      originalStoreVersion: '',
-    );
-    print(ver);
-    const simpleBehavior = true;
 
     // if (simpleBehavior) {
     basicStatusCheck(newVersion);
